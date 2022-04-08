@@ -9,21 +9,19 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 #Initialize the variables to string
-r_letters = ""
-r_symbol = ""
-r_numbers = ""
+password = ""
 #random generator letters
 for Pick_Letter in range (0,nr_letters):
-    r_letters += random.choice(letters)
+    password += random.choice(letters)
 #random generator symbols
 for Pick_Symbols in range (0,nr_symbols):
-    r_symbol += random.choice(symbols)
+    password += random.choice(symbols)
 #random generator numbers
 for Pick_Numbers in range(0,nr_numbers):
-    r_numbers +=random.choice(numbers)
+    password +=random.choice(numbers)
 #Convert STRING to LIST
-shuffle = r_letters + r_symbol + r_numbers
-str_var = list(shuffle)
+
+str_var = list(password)
 #Randomizer List
 random.shuffle(str_var)
 print ('Your random password is : '"".join(str_var))
